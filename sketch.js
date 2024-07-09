@@ -570,22 +570,22 @@ if(animation.x < -6000)
 }
 
 
-if(mouseIsOver(htPlay) && mouseWentDown("left") || mouseIsOver(htPlay) && touches.length>0)
+if(mouseIsOver(htPlay) && mouseWentDown("left"))
     {
       camera.x = 10000;
-       touches = [];
+       
 
     }
     
 
-       if(mouseIsOver(back) && mouseWentDown("left")|| mouseIsOver(back) && touches.length>0)
+       if(mouseIsOver(back) && mouseWentDown("left"))
        {
        camera.x = -2000;
-	touches = [];
+	
        }
     
 
-    if(mousePressedOver(play) || mouseIsOver(play) && touches.length>0)
+    if(mousePressedOver(play))
     {
 	
         music.play();
@@ -603,7 +603,7 @@ if(mouseIsOver(htPlay) && mouseWentDown("left") || mouseIsOver(htPlay) && touche
         a4.lifetime = 340;
         a5.lifetime = 425;
         a6.lifetime = 510;
-        touches = [];
+        
     }
     
   
@@ -636,9 +636,9 @@ if(mouseIsOver(htPlay) && mouseWentDown("left") || mouseIsOver(htPlay) && touche
     textFont("Broadway");
     text(robot.health, 105, 55);
 
-if(keyWentDown("space") && laserState === true || mouseIsOver(laserB) && touches.length>0)
+if(keyWentDown("space") && laserState === true)
 {
-  touches = [];
+  
   laser = createSprite(135, 485);
   laserScore2 = laserScore2 +1;
   laser.y = robot.y-18;
@@ -668,10 +668,10 @@ if(keyDown("w"))
 }
 
 
-if(mouseDown("left") && camera.x === 656 || mouseIsOver(shootB) && touches.length>0 && camera.x === 656)
+if(mouseDown("left") && camera.x === 656)
 {
 
-  touches = [];
+ 
   if(frameCount%2===0)
     {
     bulletS.play();
